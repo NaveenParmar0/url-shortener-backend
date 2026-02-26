@@ -1,0 +1,123 @@
+.analytics-page {
+    padding: 40px 0 80px;
+    min-height: calc(100vh - 68px);
+}
+
+.analytics-header {
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.analytics-title-group {}
+
+.analytics-title {
+    font-size: 24px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.analytics-url-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.analytics-short-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--accent-primary);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.analytics-short-link:hover {
+    text-decoration: underline;
+}
+
+.analytics-original {
+    font-size: 13px;
+    color: var(--text-muted);
+    max-width: 600px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.analytics-period {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+/* Stats */
+.analytics-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+/* Charts */
+.chart-card {
+    margin-bottom: 20px;
+    padding: 24px;
+}
+
+.chart-header {
+    margin-bottom: 24px;
+}
+
+.chart-title {
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.no-data {
+    text-align: center;
+    padding: 60px 24px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* Custom Tooltip */
+.chart-tooltip {
+    background: #1e293b;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 10px 14px;
+    font-size: 13px;
+    box-shadow: var(--shadow-card);
+}
+
+.tooltip-date {
+    color: var(--text-muted);
+    margin-bottom: 4px;
+    font-size: 12px;
+}
+
+.tooltip-value {
+    color: var(--text-primary);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.badge-success {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--success);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
