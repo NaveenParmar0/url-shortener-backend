@@ -53,7 +53,7 @@ export default function DashboardPage() {
     };
 
     const handleCopy = async (url, id) => {
-        await navigator.clipboard.writeText(`http://localhost:8080/${url.shortUrl}`);
+        await navigator.clipboard.writeText(`https://url-shortener-backend-ikye.onrender.com/${url.shortUrl}`);
         setCopiedId(id);
         setTimeout(() => setCopiedId(null), 2000);
     };
@@ -170,7 +170,7 @@ export default function DashboardPage() {
                                 <div key={url.id} className="url-card card animate-fadeInUp" style={{ animationDelay: `${0.05 * i}s` }}>
                                     <div className="url-card-header">
                                         <a
-                                            href={`http://localhost:8080/${url.shortUrl}`}
+                                            href={`https://url-shortener-backend-ikye.onrender.com/${url.shortUrl}`}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="url-short-link"
