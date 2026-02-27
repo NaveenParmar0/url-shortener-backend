@@ -1,11 +1,10 @@
 import axios from 'axios';
 
-const BACKEND_URL = 'http://localhost:8080';
+const BACKEND_URL = 'https://url-shortener-backend-ikye.onrender.com';
 
-// Empty baseURL = relative requests → Vite proxy forwards /api/* to localhost:8080
-// This avoids CORS entirely in development
+// Use the Render backend URL directly (CorsConfig.java allows this origin)
 const api = axios.create({
-    baseURL: '',
+    baseURL: BACKEND_URL,
 });
 
 api.interceptors.request.use((config) => {
@@ -28,7 +27,7 @@ export const getUrlAnalytics = (shortUrl, startDate, endDate) =>
 export const getTotalClicks = (startDate, endDate) =>
     api.get('/api/urls/totalClicks', { params: { startDate, endDate } });
 
-// Used for building redirect links (goes directly to backend)
+// Used for building redirect links (goes to the deployed backend)
 export const getRedirectBase = () => BACKEND_URL;
 
 export default api;
